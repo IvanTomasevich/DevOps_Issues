@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import IssueTicket
+from .models import Ticket
 
 # Register your models here.
-admin.site.register(IssueTicket)
+admin.site.register(Ticket)

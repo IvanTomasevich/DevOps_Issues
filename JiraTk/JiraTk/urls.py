@@ -20,8 +20,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    # URL panel admin
     path('admin/', admin.site.urls),
+    # URLs SIGT APP
     path('pages/', include('SIGT.urls')),
+    # URLs Perfiles APP
     path('accounts/', include('Perfiles.urls')),
     # Otras URLs de tu proyecto
     path('ckedit/', include('ckeditor_uploader.urls')),
