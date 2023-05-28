@@ -20,7 +20,7 @@ level_choices = [
 class Ticket(models.Model):
     title = models.CharField(max_length=48)
     sub_title = models.CharField(max_length=96)
-    body = RichTextField(max_length=512)
+    body = RichTextUploadingField()
     tipe = models.CharField(max_length=2, choices=tipe_incident)
     level = models.CharField(max_length=3, choices=level_choices, default='Mid')
     create = models.DateTimeField(auto_now_add=True)
