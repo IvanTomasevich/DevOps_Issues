@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% block contenido %}
+{% load static %}
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url({% static 'assets/img/about-bg.jpg' %})">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>Iván Tomasevich</h1>
+                            <span class="subheading">Software Developer | DevOps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <p>Soy un profesional de DevOps. Actualmente, estoy empleando mis habilidades en Accion Point, donde me he enfocado en proporcionar soluciones efectivas y eficientes para los desafíos de desarrollo y operaciones con automatización utilizando Jenkins como orquestador y Python para scripting automation. </p>
+                        <p>Mi enfoque se centra en trabajar en equipo y colaborar con otros profesionales para lograr objetivos compartidos y satisfacer las necesidades de los clientes. También poseo habilidades en la gestión y mantenimiento de la infraestructura, como Linux, Docker o Grafana, así como en la automatización de procesos para garantizar un rendimiento óptimo en la entrega de software.</p>
+                        <p>Me encanta aprender y estar al tanto de las últimas tendencias en tecnología y prácticas de DevOps para seguir mejorando y optimizando los procesos en los que trabajo.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+{% endblock %}
