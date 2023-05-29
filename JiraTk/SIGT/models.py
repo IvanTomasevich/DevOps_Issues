@@ -1,7 +1,7 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
-from Perfiles.models import Users
+from Perfiles.models import Perfil
 # Create your models here.
 # Choices para IssueTicket
 tipe_incident = [
@@ -24,4 +24,4 @@ class Ticket(models.Model):
     tipe = models.CharField(max_length=2, choices=tipe_incident)
     level = models.CharField(max_length=3, choices=level_choices, default='Mid')
     create = models.DateTimeField(auto_now_add=True)
-    author = models.ForeignKey(Users, on_delete=models.CASCADE)
+    author = models.ForeignKey(Perfil, on_delete=models.CASCADE)

@@ -25,10 +25,9 @@ urlpatterns = [
     # URLs home APP
     path('', include('home.urls')),
     # URLs SIGT APP
-    #path('pages/', include('SIGT.urls')),
-
+    path('pages/', include('SIGT.urls')),
     # URLs Perfiles APP
-    # path('accounts/', include('Perfiles.urls')),
+    path('accounts/', include('Perfiles.urls')),
     # Otras URLs de tu proyecto
     path('ckedit/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
