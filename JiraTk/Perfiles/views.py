@@ -43,8 +43,9 @@ def login_view(request):
                 login(request=request, user=user)
                 if next_url:
                     return redirect(next_url)
-                url_exitosa = reverse('inicio')
+                url_exitosa = reverse('home')
                 return redirect(url_exitosa)
+            is_loged = "Logout"
     else:  # GET
         form = AuthenticationForm()
     return render(
