@@ -26,19 +26,30 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <!--  Lista de TABs  -->
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'home'%}">Home</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'about'%}">About</a></li>
-
+                        <!-- Si el user está autenticado -->
                         {% if user.is_authenticated %}
                         <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle px-lg-3 py-3 py-lg-4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ user.username }}</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{% url 'editar_perfil' %}">Editar mis datos</a></li>
-                                <li><a class="dropdown-item" href="{% url 'agregar_avatar' %}">Agregar avatar</a></li>
+                                <li><a class="dropdown-item" href="{% url 'agregar_avatar' %}">Agregar avatar</a></li> <!--TODO: integrar en un solo lugar-->
                                 <li><a class="dropdown-item" href="{% url 'logout' %}"><strong>Cerrar Sesión</strong></a></li>
+                                <!-- Si el user es ADMIN -->
+                                {% if user.username == 'admin' %}
+                                <div class="dropdown-divider"></div>
+                                <li><a class="dropdown-item" href="{% url 'admin:index' %}"><strong>Panel Admin</strong></a></li>
+                                {% endif %}
                             </ul>
-                        </li>
+                        <!--  Si esta autenticado y tiene un avatar  -->
+                        {% if user.is_authenticated and user.perfil %}
+                        <li class="dropdown"><a href="#"><img src="{{ user.perfil.avatar.url }}" alt="{{ user.username }}" class="rounded-circle" width="50" height="50" style="margin-right: 10px">
+                        {% else %}
+                        <li class="dropdown"><a href="#"><img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y&s=128" alt="{{ user.username }}" class="rounded-circle" width="50" height="50" style="margin-right: 10px"></li>
+                        {% endif %}
                         {% else %}
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'login'%}">Login</a></li>
                         {% endif %}
@@ -85,7 +96,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2023</div>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; Team DevOps 2023</div>
                     </div>
                 </div>
             </div>

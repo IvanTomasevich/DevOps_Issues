@@ -74,7 +74,7 @@ def agregar_avatar(request):
 
         if formulario.is_valid():
             avatar = formulario.save()
-            avatar.user = request.user
+            avatar.user_profile = request.user
             avatar.save()
             url_exitosa = reverse('home')
             return redirect(url_exitosa)
