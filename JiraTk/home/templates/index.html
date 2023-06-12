@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Clean Blog - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico'%}" />
+        <title>DevOps Center</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/devops.png'%}" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -39,7 +39,7 @@
                                 <li><a class="dropdown-item" href="{% url 'agregar_avatar' %}">Agregar avatar</a></li> <!--TODO: integrar en un solo lugar-->
                                 <li><a class="dropdown-item" href="{% url 'logout' %}"><strong>Cerrar Sesión</strong></a></li>
                                 <!-- Si el user es ADMIN -->
-                                {% if user.username == 'admin' %}
+                                {% if user.is_staff == 1 %}
                                 <div class="dropdown-divider"></div>
                                 <li><a class="dropdown-item" href="{% url 'admin:index' %}"><strong>Panel Admin</strong></a></li>
                                 {% endif %}
