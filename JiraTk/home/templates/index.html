@@ -44,7 +44,7 @@
                                 <li><a class="dropdown-item" href="{% url 'admin:index' %}"><strong>Panel Admin</strong></a></li>
                                 {% endif %}
                             </ul>
-                        <!--  Si esta autenticado y tiene un avatar  -->
+                        <!--  Si está autenticado y tiene un avatar  -->
                         {% if user.is_authenticated and user.perfil %}
                         <li class="dropdown"><a href="#"><img src="{{ user.perfil.avatar.url }}" alt="{{ user.username }}" class="rounded-circle" width="50" height="50" style="margin-right: 10px">
                         {% else %}

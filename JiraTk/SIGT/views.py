@@ -1,7 +1,14 @@
-from django.shortcuts import render
+from django.views.generic.edit import CreateView
+# from django.shortcuts import render, redirect
+from .forms import CreateTicket
+from .models import Ticket
 
 # Create your views here.
 
 
-def sigt_view(request):
-    return render(request, "sigt.html", {})
+class TicketCreateView(CreateView):
+    model = Ticket
+    form_class = CreateTicket
+    template_name = 'formulario_ticket.html'
+    success_url = 'home'
+
