@@ -21,11 +21,7 @@ def registro(request):
             return redirect(url_exitosa)
     else:  # GET
         formulario = UserRegisterForm()
-    return render(
-        request=request,
-        template_name='Perfiles/registro.html',
-        context={'form': formulario},
-    )
+    return render(request, 'Perfiles/registro.html', {'form': formulario})
 
 
 def login_view(request):
@@ -45,14 +41,9 @@ def login_view(request):
                     return redirect(next_url)
                 url_exitosa = reverse('home')
                 return redirect(url_exitosa)
-            is_loged = "Logout"
     else:  # GET
         form = AuthenticationForm()
-    return render(
-        request=request,
-        template_name='Perfiles/login.html',
-        context={'form': form},
-    )
+    return render(request, 'Perfiles/login.html', {'form': form})
 
 
 class CustomLogoutView(LogoutView):
@@ -80,8 +71,4 @@ def agregar_avatar(request):
             return redirect(url_exitosa)
     else:  # GET
         formulario = AvatarFormulario()
-    return render(
-        request=request,
-        template_name="Perfiles/formulario_avatar.html",
-        context={'form': formulario},
-    )
+    return render(request, "Perfiles/formulario_avatar.html", {'form': formulario})
