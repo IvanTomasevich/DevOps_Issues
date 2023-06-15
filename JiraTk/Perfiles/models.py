@@ -6,5 +6,8 @@ class Perfil(models.Model):
     user_profile = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     avatar = models.ImageField(upload_to='avatars', null=True, blank=True)
 
+    class Meta:
+        verbose_name_plural = "Perfiles"
+
     def __str__(self):
-        return f"Avatar de: {self.user_profile}"
+        return f"Perfil de: {self.user_profile}"

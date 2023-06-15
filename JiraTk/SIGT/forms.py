@@ -1,8 +1,6 @@
 from django import forms
-from SIGT.models import Ticket
-from ckeditor.fields import RichTextField
-from ckeditor_uploader.fields import RichTextUploadingField
-from ckeditor_uploader.widgets import CKEditorUploadingWidget
+from .models import Ticket
+from ckeditor_uploader.widgets import *
 
 
 class CreateTicket(forms.ModelForm):
@@ -11,3 +9,7 @@ class CreateTicket(forms.ModelForm):
     class Meta:
         model = Ticket
         fields = '__all__'
+        widgets = {
+            fields: forms.TextInput(attrs={'class': 'form-floating'})
+        }
+
