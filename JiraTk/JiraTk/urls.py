@@ -29,5 +29,5 @@ urlpatterns = [
     # URLs Perfiles APP
     path('accounts/', include('Perfiles.urls')),
     # Otras URLs de tu proyecto
-    path('ckedit/', include('ckeditor_uploader.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

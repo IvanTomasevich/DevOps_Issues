@@ -1,6 +1,7 @@
 from django.views.generic.edit import CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 # from django.shortcuts import render, redirect
+from django.urls import reverse, reverse_lazy
 from .forms import CreateTicket
 from .models import Ticket
 
@@ -11,5 +12,10 @@ class TicketCreateView(LoginRequiredMixin, CreateView):
     model = Ticket
     form_class = CreateTicket
     template_name = 'formulario_ticket.html'
-    success_url = 'home'
+    success_url = reverse_lazy('home')
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['user'] = self.request.user
+        return kwargs
 

@@ -37,7 +37,7 @@
                                 <li><a class="dropdown-item" href="{% url 'agregar_avatar' %}">Agregar avatar</a></li> <!--TODO: integrar en un solo lugar-->
                                 <li><a class="dropdown-item" href="{% url 'logout' %}"><strong>Cerrar Sesión</strong></a></li>
                                 <!-- Si el user es ADMIN -->
-                                {% if user.is_staff == 1 %}
+                                {% if user.is_superuser or user.is_staff == 1 %}
                                 <div class="dropdown-divider"></div>
                                 <li><a class="dropdown-item" href="{% url 'admin:index' %}"><strong>Panel Admin</strong></a></li>
                                 {% endif %}

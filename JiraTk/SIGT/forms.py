@@ -8,8 +8,10 @@ class CreateTicket(forms.ModelForm):
 
     class Meta:
         model = Ticket
-        fields = '__all__'
-        widgets = {
-            fields: forms.TextInput(attrs={'class': 'form-floating'})
-        }
+        exclude = ['author']
 
+    def __init__(self, *args, **kwargs):
+        user = kwargs.pop('user', None)  # Obtiene el usuario pasado como argumento
+        super().__init__(*args, **kwargs)
+        if user:
+            self.instance.user = user  # Asigna el usuario a la instancia del modelo

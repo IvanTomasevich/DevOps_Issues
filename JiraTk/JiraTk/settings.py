@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ckeditor',
     'ckeditor_uploader',
-    'home',
-    'SIGT',  # Sistema Integral de Gestion de Tickets
-    'Perfiles',
+    'home',      # App Home principal
+    'SIGT',      # App modelo de negocio Sistema Integral de Gestion de Tickets
+    'Perfiles',  # App gestion de usuarios y/o perfiles
 ]
 
 MIDDLEWARE = [
@@ -131,12 +131,13 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / "JiraTk/static",
 ]
-#STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = BASE_DIR / 'static'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_RESTRICT_BY_USER = False
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -144,17 +145,5 @@ CKEDITOR_UPLOAD_PATH = 'uploads/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
-# CKEDITOR_CONFIGS = {
-#     'default': {
-#         # 'toolbar': 'basic',
-#         'toolbar': [
-#                     ['Bold', 'Italic', 'Underline'],
-#                     ['NumberedList', 'BulletedList', 'Indent', 'Outdent'],
-#                     ['Link', 'Unlink'],
-#                     ['RemoveFormat'],
-#         ],
-#         'height': 300,
-#         'width': '100%',
-#     },
-# }
+
 
