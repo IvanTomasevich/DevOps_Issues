@@ -6,7 +6,6 @@ from django.contrib.auth.models import User
 
 class CreateTicket(forms.ModelForm):
     body = forms.CharField(widget=CKEditorUploadingWidget())
-    author = User
 
     class Meta:
         model = Ticket

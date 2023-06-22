@@ -1,0 +1,33 @@
+{% extends "home.html" %}
+
+{% block lista %}
+<!-- Post Content-->
+<article class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Nivel</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for tk in object_list %}
+                    <tr>
+                        <th scope="row">{{ tk.create }}</th>
+                        <td>{{ tk.author }}</td>
+                        <td>{{ tk.title }}</td>
+                        <td>{{ tk.level }}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</article>
+{% endblock lista %}
