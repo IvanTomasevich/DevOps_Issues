@@ -8,6 +8,6 @@ urlpatterns = [
     path('login/', login_view, name="login"),
     path('logout/', CustomLogoutView.as_view(), name="logout"),
     # URLS de Perfil
-    path('editar-mi-perfil/', MiPerfilUpdateView.as_view(), name="editar_perfil"),
+    path('profile/', MiPerfilUpdateView.as_view(), name="editar_perfil"),
     path('agregar-avatar/', agregar_avatar, name="agregar_avatar"),
 ]
