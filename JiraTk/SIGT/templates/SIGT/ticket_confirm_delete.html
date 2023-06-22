@@ -10,9 +10,10 @@
                     <div class="card-body">
                         <form method="post">
                             {% csrf_token %}
-                            {{ form.media }}
                             {{ form.as_p }}
-                            <input class="btn btn-primary" type="submit" value="Guardar"/>
+                            <p>¿Estás seguro de que deseas eliminar {{object}}?</p>
+                            <input class="btn btn-primary" type="submit" value="Eliminar"/>
+                            <a class="btn btn-primary" href="{% url 'list_ticket' %}">Volver →</a>
                         </form>
                     </div>
                 </div>
