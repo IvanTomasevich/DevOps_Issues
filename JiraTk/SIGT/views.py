@@ -1,4 +1,4 @@
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
@@ -25,3 +25,8 @@ class TicketCreateView(LoginRequiredMixin, CreateView):
 class TicketList(ListView):
     model = Ticket
     template_name = 'list_tickets.html'
+
+
+class TicketDetail(DetailView):
+    model = Ticket
+    success_url = reverse_lazy('list_tickets')

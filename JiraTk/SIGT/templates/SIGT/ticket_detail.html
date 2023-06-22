@@ -1,0 +1,25 @@
+{% extends "home.html" %}
+
+{% block lista %}
+<article class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="col-lg-6">
+                    <!-- Blog post-->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="small text-muted">Creado el {{object.create}}</div>
+                            <h2 class="card-title h4">{{object.title}}</h2>
+                            <h4 class="card-title h6">{{object.sub_title}}</h4>
+                            <p class="card-text">{{object.body | safe}}</p>
+                            <p class="lead">Tipo: {{object.tipe}} --> Nivel: {{object.level}}</p>
+                            <p>{{object.author}}</p>
+                            <a class="btn btn-primary" href="{% url 'list_ticket' %}">Volver →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</article>
+{% endblock lista %}
