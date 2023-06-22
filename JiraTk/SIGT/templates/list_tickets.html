@@ -10,6 +10,8 @@
                     <thead>
                     <tr>
                         <th scope="col"><i class="fa-solid fa-star"></i></th>
+                        <th scope="col"><i class="fa-solid fa-star"></i></th>
+                        <th scope="col"><i class="fa-solid fa-star"></i></th>
                         <th scope="col">Fecha</th>
                         <th scope="col">Autor</th>
                         <th scope="col">Titulo</th>
@@ -19,9 +21,9 @@
                     <tbody>
                     {% for tk in object_list %}
                     <tr>
-                        <th scope="row">
-                            <a href="{% url 'detail_ticket' tk.id %}"><i class="fa-solid fa-plus"></i></a>
-                        </th>
+                        <th scope="row"><a href="{% url 'detail_ticket' tk.id %}"><i class="fa-solid fa-plus"></i></a></th>
+                        <th scope="row"><a href="{% url 'update_ticket' tk.id %}"><i class="fa-solid fa-pen"></i></a></th>
+                        <th scope="row"><a href="{% url 'delete_ticket' tk.id %}"><i class="fa-solid fa-trash"></i></a></th>
                         <td>{{ tk.create }}</td>
                         <td>{{ tk.author }}</td>
                         <td>{{ tk.title }}</td>
