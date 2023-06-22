@@ -1,17 +1,14 @@
 from django import forms
 from .models import Ticket
 from ckeditor_uploader.widgets import *
+from django.contrib.auth.models import User
 
 
 class CreateTicket(forms.ModelForm):
     body = forms.CharField(widget=CKEditorUploadingWidget())
+    author = User
 
     class Meta:
         model = Ticket
+        fields = '__all__'
         exclude = ['author']
-
-    def __init__(self, *args, **kwargs):
-        user = kwargs.pop('user', None)  # Obtiene el usuario pasado como argumento
-        super().__init__(*args, **kwargs)
-        if user:
-            self.instance.user = user  # Asigna el usuario a la instancia del modelo
