@@ -40,5 +40,28 @@ python manage.py runserver
 | Piky      | Chocolate23  |              |
 | Amatista  | sabado.23    |              |
 
+### Test unitario
 
+Se realizó la ejecución de 7 test sobre el model principal Ticket dando como resultado la siguiente salida por consola.
+
+```commandline
+(venv) [ivan@arch JiraTk]$ python manage.py test
+Found 7 test(s).
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.011s
+
+OK
+Destroying test database for alias 'default'...
+(venv) [ivan@arch JiraTk]$ 
+
+```
+
+Para ejecutar estos test dentro del project dir "JiraTk/" correr el command:
+
+```commandline
+python manage.py test
+```
 
