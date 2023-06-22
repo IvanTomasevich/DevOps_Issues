@@ -11,9 +11,9 @@
                             <form method="post">
                                  {% csrf_token %}
                                  {{ form.as_p }}
-                                 <input type="submit" value="Iniciar Sesión" />
+                                 <input class="btn btn-primary" type="submit" value="Iniciar Sesión" />
+                                <a class="btn btn-primary" href="{% url 'registro' %}">Registro →</a>
                             </form>
-                            <a class="dropdown-item" href="{% url 'registro' %}"><strong>Resgistro</strong></a>
                         </div>
                     </div>
                 </div>

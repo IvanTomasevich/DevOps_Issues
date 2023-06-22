@@ -4,7 +4,7 @@
 Proyecto final curso Python CoderHouse comisión 40440
 
 
-[![Video](https://img.youtube.com/vi/yW0t029OIEw/0.jpg)](https://www.youtube.com/watch?v=yW0t029OIEw)
+[![Video](https://img.youtube.com/vi/RoFFtYjT2bk/0.jpg)](https://www.youtube.com/watch?v=RoFFtYjT2bk)
 
 Para el proyecto se utilizaron las siguientes herramientas y tecnologías.
 
