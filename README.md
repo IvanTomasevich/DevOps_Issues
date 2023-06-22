@@ -3,11 +3,7 @@
 
 Proyecto final curso Python CoderHouse comisión 40440
 
-<!-- Reemplaza `VIDEO_ID` con el ID real de tu video de YouTube -->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mYnPZ49RCQE" frameborder="0" allowfullscreen></iframe>
-
-<iframe width="2383" height="985" src="https://www.youtube.com/embed/udssHLrTzTU" title="&quot;Lo Que No Muere&quot; (EPK - Backstage)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+[![Alt text](https://img.youtube.com/vi/yW0t029OIEw/0.jpg)](https://www.youtube.com/watch?v=yW0t029OIEw)
 Para el proyecto se utilizaron las siguientes herramientas y tecnologías.
 
 * SO [ArcoLinuxB](https://arcolinuxb.com/)  | [Qtile WM](https://qtile.org/)
