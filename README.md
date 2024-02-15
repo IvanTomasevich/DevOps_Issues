@@ -1,3 +1,5 @@
+[Migrado a GitLab](https://gitlab.com/tomasevic.ind/DevOps_Issues)
+
 # DevOps Center
 ## Sistema Integral de Gestion de Ticket (SIGT)
 
